@@ -1,0 +1,135 @@
+/*Rooot*/
+:root {
+    --main-transition: 0.3s;
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+
+/***************/
+#project-page {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+@media(max-width:767px) {
+    #project-page {
+        grid-template-columns: minmax(200px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+
+#project-page .project {}
+
+#project-page .project .date {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#project-page .project h4 {
+    font-weight: normal;
+}
+
+#project-page .project .team {
+    position: relative;
+    min-height: 80px;
+}
+
+#project-page .project .team a {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#project-page .project .team a:hover {
+    z-index: 1000;
+}
+
+#project-page .project .team a:nth-child(2) {
+    left: 25px;
+}
+
+#project-page .project .team a:nth-child(3) {
+    left: 50px
+}
+
+#project-page .project .team a:nth-child(4) {
+    left: 75px;
+}
+
+#project-page .project .team a:nth-child(5) {
+    left: 100px
+}
+
+#project-page .project .team img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 2px solid white;
+}
+
+#project-page .project .task {
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+#project-page .project .task span {
+    padding: 3px 8px;
+    margin-left: 5px;
+    width: fit-content;
+}
+
+@media (max-width:767px) {
+    #project-page .project .task {
+        flex-direction: column;
+    }
+
+    #project-page .project .task span:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+#project-page .project .info {
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+@media(max-width:767px) {
+    #project-page .project .info {
+        flex-direction: column;
+    }
+}
+
+#project-page .project .info .prog {
+    height: 8px;
+    width: 280px;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#project-page .project .info .prog span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+@media(max-width:767px) {
+    #project-page .project .info .prog {
+        margin-bottom: 15px;
+    }
+}
+
+#project-page .project {}
+
+#project-page {}

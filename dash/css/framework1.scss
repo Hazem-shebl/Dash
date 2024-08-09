@@ -1,0 +1,41 @@
+/*Roots*/
+
+/*Display*/
+$display:flex,block,grid,none;
+@each $i in $display{
+    .d-#{$i}{display: #{$i}};
+}
+
+.f-wrap{@extend .d-flex; flex-wrap: wrap;}
+
+/*padding*/
+$counter:0;
+@for $i from 0 through 6{
+    .pad-#{$counter}{padding: #{$counter}px;};
+    .pad-l-#{$counter}{padding-left: #{$counter}px;};
+    .pad-r-#{$counter}{padding-right: #{$counter}px;};
+    $counter:$counter+5;
+}
+/*margin*/
+$counter:0;
+@for $i from 0 to 7{
+    .m-#{$counter}{margin: #{$counter}px;}
+    .mt-#{$counter}{margin-top: #{$counter}px;}
+    .mb-#{$counter}{margin-bottom: #{$counter}px;}
+    .mlef-#{$counter}{margin-left: #{$counter}px;}
+    .mrig-#{$counter}{margin-right: #{$counter}px;}
+    $counter:$counter+5;
+}
+/*Font*/
+@for $i from 1 through 20{
+    .fo-s-#{$i+10}{font-size: #{$i + 10px};}
+}
+/*border*/
+$color:"#ccc","#eee";
+/*Hieght & width */
+$pixle:0;
+@for $i from 0 to 20{
+.w-#{$pixle}{width:#{$pixle}px;}
+.h-#{$pixle}{height: #{$pixle}px;}
+$pixle:$pixle+20;
+}

@@ -1,0 +1,181 @@
+/*Rooot*/
+:root {
+    --main-transition: 0.3s;
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+
+/***************/
+/* friends-page */
+#friends-page {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+@media(max-width:767px) {
+    #friends-page {
+        grid-template-columns: minmax(200px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+
+    }
+}
+
+#friends-page .friend {}
+
+#friends-page .friend .contact {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#friends-page .friend .contact i {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 50%;
+    color: #666;
+    cursor: pointer;
+    transition: var(--main-transition);
+    font-size: 13px;
+}
+
+#friends-page .friend .contact i:hover {
+    background-color: var(--blue-alt-color);
+    color: white;
+}
+
+#friends-page .friend .icons {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#friends-page .friend .icons i {
+    margin-right: 5px;
+}
+
+#friends-page .friend .icons.vip::after {
+    content: "VIP";
+    color: var(--orange-color);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 40px;
+    opacity: 0.45;
+}
+
+#friends-page .friend .info {}
+
+
+
+/****************/
+
+/*Files */
+#files-page {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+@media(max-width:767px) {
+    #files-page {
+        flex-direction: column;
+        align-items: normal;
+    }
+}
+
+#files-page .file-stats {
+    min-width: 260px;
+}
+
+#files-page .file-stats .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#files-page .file-stats .size {
+    margin-left: auto;
+}
+
+#files-page .file-stats .blue {
+    background-color: rgb(0 117 255 / 20%);
+}
+
+#files-page .file-stats .green {
+    background-color: rgb(34 197 94 /20%);
+
+}
+
+#files-page .file-stats .red {
+    background-color: rgb(244 67 54 /20%);
+}
+
+#files-page .file-stats .orange {
+    background-color: rgb(245 158 11 / 20%);
+
+}
+
+#files-page .file-stats .upload {
+    margin: 15px auto 0;
+    padding: 10px 15px;
+    transition: var(--main-transition);
+}
+
+#files-page .file-stats .upload:hover {
+    background-color: var(--blue-alt-color);
+}
+
+#files-page .file-stats .upload:hover i {
+    animation: go-up 0.8s infinite;
+}
+
+@keyframes go-up {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+#files-page .file-content {
+    flex: 1;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+#files-page .file-content .file {}
+
+#files-page .file-content .file i {}
+
+#files-page .file-content .file .icon {}
+
+#files-page .file-content .file .icon img {
+    width: 64px;
+    height: 64px;
+    transition: var(--main-transition);
+}
+
+#files-page .file-content .file:hover .icon img {
+    transform: rotate(5deg);
+}
+
+#files-page .file-content .file .info {
+    border-top: 1px solid #eee;
+}
+
+#files-page .file-content {}
+
+/********/
